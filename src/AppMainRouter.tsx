@@ -1,11 +1,14 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import { JournalPage } from "./journal/pages/JournalPage";
 import { LoginPage, RegisterPage } from "./auth/pages";
 import { CheckingAuth } from "./ui";
 import { useCheckAuth } from "./hooks";
 
 export const AppMainRouter = () => {
-
   const status = useCheckAuth();
 
   // Mostramos el componente de carga mientras verificamos el estado
